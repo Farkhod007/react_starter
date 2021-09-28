@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Typography from './components/Typography'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	return (
+		<div>
+			<Typography variant="h1">This is a heading one</Typography>
+			<Typography variant="h2" color="papayawhip">
+				This is a heading one
+			</Typography>
+			<Typography variant="bodyOne" color="secondary">
+				This is a heading one
+			</Typography>
+		</div>
+	)
 }
 
-export default App;
+export default App
