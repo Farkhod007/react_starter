@@ -1,0 +1,38 @@
+.typography--variant-h1 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .typography--variant-h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .typography--variant-body1 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .typography--variant-subheading1 {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  .typography--variant-body2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .typography--color-primary {
+    color: red;
+  }
+
+  .typography--color-green {
+    color: green;
+  }
+
+  .typography--color-blue {
+    color: blue;
+  }
+  
+  
