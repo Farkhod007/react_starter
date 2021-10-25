@@ -1,1 +1,5 @@
 /* Reset CSS */
+
+html {
+    scroll-behavior: smooth;
+}
