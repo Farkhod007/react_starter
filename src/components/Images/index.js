@@ -1,13 +1,12 @@
-import Styled from './style-components'
+import * as Styled from './style-components'
 
-const Images = ({ id, src, alt, width ='100%', height = '100%', maxwidth = '100%' }) => {
+const Image = ({  src, alt , ...rest}) => {
 	return (
 		<>
-			<Styled.Img
-				id={id} src={src} alt={alt}
-				style={{maxWidth: maxwidth , width: width , height:height }}
+			<Styled.Img {...rest}
+				src={src} alt={alt}
 			/>
 		</>
 	)
 }
-export default Images
+export default Image;
