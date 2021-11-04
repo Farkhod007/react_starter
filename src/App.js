@@ -1,16 +1,13 @@
 import './App.css'
-import Image from './components/Images'
+import Ratio from './components/Ratio'
 import React from 'react'
 
 const App = () => {
 	return (
 		<div>
-			<Image
-				src='./images/1.jpg'
-				height='100vh'
-				maxWidth='500px'
-				width='100%'
-			/>
+			<Ratio ratio={16/9}>
+
+			</Ratio>
 		</div>
 	)
 }
