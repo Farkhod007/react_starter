@@ -1,14 +1,13 @@
-import Styled from './styled-components'
+import * as Styled from './styled-components'
 
-const Picture = (props) => {
-    return (
-        <>
-            <picture>
-                <source media="(min-width:750px)" srcSet={props.one}/>
-                <source media="(min-width:465px)" srcSet={props.two}/>
-                <Styled.img src={props.three} alt="picture"/>
-            </picture>
-        </>
-    )
+const Picture = ({ data, fallback, alt, ...rest }) => {
+	return (
+		<picture>
+			{data && data.map((item, index) => (
+				<source key={index.toString()} srcSet={item.src} media={item.media} type='image/jpeg'  />
+			))}
+			<Styled.Img src={fallback} alt={alt} {...rest} />
+		</picture>
+	)
 }
-export default Picture;
+export default Picture
