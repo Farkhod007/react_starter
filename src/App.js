@@ -1,10 +1,22 @@
+import Typography from './components/Typography'
+import './App.css'
 import React from 'react'
 import './App.css'
 import Picture from './components/Picture'
 
 const App = () => {
 	return (
-		<div>
+		<>
+			<Typography variant="h1">This is a heading one</Typography>
+			<Typography variant="h2" color="papayawhip">
+				This is a heading one
+			</Typography>
+			<Typography variant="bodyMedium" color="secondary">
+				This is a heading one
+			</Typography>
+			<Typography variant="bodySmall" color="orange">
+				This is a heading one
+			</Typography>
 			<Picture
 				const data={[
 				{
@@ -20,7 +32,7 @@ const App = () => {
 				width='100%'
 				height='300'
 			/>
-		</div>
+		</>
 	)
 }
 
