@@ -4,6 +4,7 @@ import Ratio from './components/Ratio'
 import React from 'react'
 import Picture from './components/Picture'
 import Image from './components/Images'
+import Button from './components/Button'
 
 const App = () => {
 	return (
@@ -35,6 +36,9 @@ const App = () => {
 					width="100%"
 					height="100%"
 				/>
+				<Button background="yellow" color="dark" width="200px">
+					Hello
+				</Button>
 			</Ratio>
 		</>
 	)
