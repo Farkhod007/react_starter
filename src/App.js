@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Typography from "./components/Typography";
+import Text from "./components/Text";
+import Tooltip from "./components/Tooltip";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Typography variant="h1">This is heading</Typography>
+      <Typography variant="h2" color="secondary">
+        This is heading
+      </Typography>
+      <Typography variant="bodyOne" color="papayawip">
+        This is heading
+      </Typography>
+      <Text type="secondary">Salom</Text>
+
+      <Tooltip color="secondary" brcolor="red" bgcolor="blue" content="Tooltip" direction="bottom"><button>Salom</button></Tooltip>
+
     </div>
   );
-}
+};
 
 export default App;
