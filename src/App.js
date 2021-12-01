@@ -19,9 +19,9 @@ const App = () => {
 			</Typography>
 			<GoogleMap />
 			{/* <YandexMap /> */}
-			<Space size={48}>
+			<Space size={48} direction="vertical" align="end" wrap="wrap">
 				<div>div</div>
-				<div>div</div>
+				<div style={{ width: "95%", border: "1px solid green" }}>div</div>
 				<div>div</div>
 				<div>div</div>
 			</Space>

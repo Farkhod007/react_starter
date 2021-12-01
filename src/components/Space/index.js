@@ -1,4 +1,4 @@
-import * as Styled from './styled-components'
+import * as Styled from './style-components'
 import PropTypes from 'prop-types'
 
 const Space = ({ children, ...props }) => {
@@ -8,11 +8,15 @@ const Space = ({ children, ...props }) => {
 Space.propTypes = {
 	size: PropTypes.number,
 	direction: PropTypes.string,
+	align: PropTypes.string,
+	wrap: PropTypes.string,
 }
 
 Space.defaultProps = {
-	size: 8,
+	size: 24,
 	direction: 'horizontal',
+	align: 'flex-start',
+	wrap: 'nowrap',
 }
 
 export default Space
