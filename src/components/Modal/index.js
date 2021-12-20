@@ -1,16 +1,23 @@
+import { useState } from 'react'
 import * as Styled from "./style-components"
 import PropTypes from 'prop-types'
 import { withTheme } from "styled-components"
-const Modal = ({ children, ...props }) => {
-  return (
-    <Styled.Modal {...props} >
-      {children}
-    </Styled.Modal>
-  )
 
+const Modal = ({ visible, hide, children, ...props }) => {
+  return (
+    <>
+      {visible && (
+        <Styled.Modal {...props} >
+          <button onClick={hide}>X</button>
+          {children}
+        </Styled.Modal>
+      )}
+    </>
+  )
 }
 
 Modal.propTypes = {
+  visible: PropTypes.bool,
   width: PropTypes.number,
   padding: PropTypes.number,
   bgcolor: PropTypes.string,
@@ -21,7 +28,9 @@ Modal.propTypes = {
   // align: PropTypes.string,
   // wrap: PropTypes.string,
 }
+
 Modal.defaultProps = {
+  visible: false,
   size: 200,
   padding: 0,
   border: 0,
@@ -32,4 +41,6 @@ Modal.defaultProps = {
   // align: 'start',
   // wrap: 'nowrap',
 }
+
+
 export default Modal

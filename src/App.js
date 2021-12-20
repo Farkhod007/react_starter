@@ -1,15 +1,28 @@
+import React, { useState } from "react";
 // import Typography from "./components/Typography";
-import "./App.css";
 import Ratio from "./components/Ratio";
-import React from "react";
 import Picture from "./components/Picture";
 import Image from "./components/Images";
 import Modal from "./components/Modal";
 
+import "./App.css";
+
 const App = () => {
+
+    const [isModalVisible, setIsModalVisible] = useState(false)
+
+    const showModal = () => {
+        setIsModalVisible(true)
+    }
+
+    const hideModal = () => {
+        setIsModalVisible(false)
+    }
+
     return (
         <div>
-            <Modal size={600} bgcolor={"#123456"} padding={30} color={'yellow'} border={5} align={'right'}  >
+            <button onClick={showModal}>Show Modal</button>
+            <Modal size={600} bgcolor={"#123456"} visible={isModalVisible} hide={hideModal} padding={30} color={'yellow'} border={5} align={'right'}  >
                 <h1>Holle word </h1>
             </Modal>
             {/* <Typography variant="h1"> This is a heading one </Typography>{" "}
